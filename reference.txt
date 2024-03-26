@@ -1,0 +1,44 @@
+Pycharm-Pytest installation setup
+1. Install PyCharm
+2. Install Python (set PATH variable)
+3. Install pytest (pip install pytest)
+4. Install selenium (pip install selenium)
+5. Install pytest ordering (pip install pytest-ordering), to order the test
+6. pip install pytest-dependency
+7. pip install pytest-xdist ,  for parallel test
+8. pip install pytest-metadata
+
+
+Execution command
+
+ 1-- run single module
+ pytest -s -v .\test_Login.py
+
+ 2-- run all module
+ pytest -s -v
+
+ 3--Specific test method from module
+ pytest -s -v .\test_Login.py::TestLogin::test_LoginWithEmail
+
+ 4. Grouping methods
+    pytest -v -s -m "regression" .\grouping_method\
+    pytest -v -s -m "not regression" .\grouping_method\  - only sanity test execute
+
+ 5. parallel test
+    pytest -s -v -n = 2 .\grouping_method\
+
+  6. run on specific browser
+    pytest -s -v .\fixtureConcepts\test_commandLine.py --browser edge
+
+
+
+
+*********************************************************IMP NOTE*******************************************
+1. skip test
+2. dependent test
+3. grouping test
+4. parallel test
+5. Parametrization
+
+
+
